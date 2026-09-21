@@ -607,7 +607,7 @@ local function on_character_select_load()
 	--------------
 	--- defoko ---
 	--------------
-	init_physbone_chain(E_MODEL_DEFOKO, 0, 0.2, 0.567, 90, 90) -- cable
+	init_physbone_chain(E_MODEL_DEFOKO, 0, 0.004, 1, 90, 90) -- cable
 	init_physbone_chain(E_MODEL_DEFOKO, 1, 0.05, 0.9, 90, 90) -- ahoge
 	init_physbone_chain(E_MODEL_DEFOKO, 2, 0.05, 0.9, 0, 90) -- necktie
 
@@ -621,9 +621,10 @@ local function on_character_select_load()
         TEX_DEFOKO_LIFE_ICON, -- Life Icon
         1.2                   -- Camera Scale
     )
-	-- _G.charSelect.character_add_caps(E_MODEL_DEFOKO, CAPTABLE_DEFOKO)
 	charSelect.character_add_voice(E_MODEL_DEFOKO, VOICETABLE_DEFOKO)
-	charSelect.character_add_celebration_star(E_MODEL_DEFOKO, E_MODEL_RICE, nil)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_DEFOKO, E_MODEL_RICE, nil)
+    end
     if PALETTE_DEFOKO then
         for i = 1, #PALETTE_DEFOKO do
             charSelect.character_add_palette_preset(E_MODEL_DEFOKO, PALETTE_DEFOKO[i], PALETTE_DEFOKO[i].name)
@@ -653,9 +654,10 @@ local function on_character_select_load()
         TEX_REI_LIFE_ICON, -- Life Icon
         1.2                   -- Camera Scale
     )
-	-- _G.charSelect.character_add_caps(E_MODEL_DEFOKO, CAPTABLE_DEFOKO)
 	charSelect.character_add_voice(E_MODEL_REI, VOICETABLE_REI)
-	charSelect.character_add_celebration_star(E_MODEL_REI, E_MODEL_KARAAGE, nil)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_REI, E_MODEL_KARAAGE, nil)
+    end
     if PALETTE_REI then
         for i = 1, #PALETTE_REI do
             charSelect.character_add_palette_preset(E_MODEL_REI, PALETTE_REI[i], PALETTE_REI[i].name)
@@ -685,9 +687,10 @@ local function on_character_select_load()
         TEX_MOMO_LIFE_ICON, -- Life Icon
         1.2                  -- Camera Scale
     )
-	-- _G.charSelect.character_add_caps(E_MODEL_DEFOKO, CAPTABLE_DEFOKO)
 	charSelect.character_add_voice(E_MODEL_MOMO, VOICETABLE_MOMO)
-	charSelect.character_add_celebration_star(E_MODEL_MOMO, E_MODEL_PEACH, nil)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_MOMO, E_MODEL_PEACH, nil)
+    end
     if PALETTE_MOMO then
         for i = 1, #PALETTE_MOMO do
             charSelect.character_add_palette_preset(E_MODEL_MOMO, PALETTE_MOMO[i], PALETTE_MOMO[i].name)
@@ -704,12 +707,14 @@ local function on_character_select_load()
     -------------
     -- credits --
     -------------
-    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling/Animation")
-	charSelect.credit_add(TEXT_MOD_NAME, "Chalz", "In-game samples")
+    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling and animation")
+	charSelect.credit_add(TEXT_MOD_NAME, "chalz276", "Voice samples")
+    charSelect.credit_add(TEXT_MOD_NAME, "Jv132", "Grafitti artwork")
     charSelect.credit_add(TEXT_MOD_NAME, "Cooliokid 956", "Facial code")
-	charSelect.credit_add(TEXT_MOD_NAME, "Ameya", "Defoko Voicebank")
-	charSelect.credit_add(TEXT_MOD_NAME, "momomomo-P", "Momone Momo Voicebank")
-	charSelect.credit_add(TEXT_MOD_NAME, "missile_39", "Adachi Rei Voicebank")
+    charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "Physbone engine")
+	charSelect.credit_add(TEXT_MOD_NAME, "AmeyaP", "Defoko voicebank")
+	charSelect.credit_add(TEXT_MOD_NAME, "momomomo-P", "Momone Momo voicebank")
+	charSelect.credit_add(TEXT_MOD_NAME, "missile_39", "Adachi Rei voicebank")
 end
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
 
