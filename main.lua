@@ -713,7 +713,7 @@ local function on_character_select_load()
     charSelect.credit_add(TEXT_MOD_NAME, "Cooliokid 956", "Facial code")
     charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "Physbone engine")
 	charSelect.credit_add(TEXT_MOD_NAME, "AmeyaP", "Defoko voicebank")
-	charSelect.credit_add(TEXT_MOD_NAME, "momomomo-P", "Momone Momo voicebank")
+	charSelect.credit_add(TEXT_MOD_NAME, "momomomo-P", "Momo Momone voicebank")
 	charSelect.credit_add(TEXT_MOD_NAME, "missile_39", "Adachi Rei voicebank")
 end
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
