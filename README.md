@@ -4,7 +4,7 @@
 
 ## <p align=center>Download it in the [releases page!](https://github.com/denpakei32/cs-utauloid-pack/releases)</p>
 
-<p align=center> <img src="https://github.com/denpakei32/cs-utauloid-pack/blob/main/utaupack_render_github.png" width="400"> </p>
+<p align=center> <img src="https://github.com/denpakei32/cs-utauloid-pack/blob/main/utaupack_render_github.png" width="670"> </p>
 
 ## <p align=center>Character Select is required. Download it here: https://github.com/Squishy6094/character-select-coop</p>
 
