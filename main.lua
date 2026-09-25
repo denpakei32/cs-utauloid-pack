@@ -392,7 +392,7 @@ local PALETTE_DEFOKO = {
         name     = "Uta Utane",
         [PANTS]  = "1A1A1A", -- skirt n sleeves 
         [SHIRT]  = "FFFFFF", -- shirt
-        [GLOVES] = "307AFF", -- UNUSED
+        [GLOVES] = "307AFF", -- headset (inside part)
         [SHOES]  = "1A1A1A", -- shoes
         [HAIR]   = "6F3E7F", -- hair
         [SKIN]   = "F7CCAA", -- skin
@@ -403,7 +403,7 @@ local PALETTE_DEFOKO = {
         name     = "Kikyuune Aiko",
         [PANTS]  = "424D61", -- skirt n sleeves 
         [SHIRT]  = "424D61", -- shirt
-        [GLOVES] = "B2F8E9", -- UNUSED
+        [GLOVES] = "B2F8E9", -- headset (inside part)
         [SHOES]  = "424D61", -- shoes
         [HAIR]   = "3EC7FD", -- hair
         [SKIN]   = "F9E0E2", -- skin
@@ -414,7 +414,7 @@ local PALETTE_DEFOKO = {
         name     = "Sekka Yufu",
         [PANTS]  = "F5F5F3", -- skirt n sleeves 
         [SHIRT]  = "F5F5F3", -- shirt
-        [GLOVES] = "0A0A0A", -- UNUSED
+        [GLOVES] = "D2D2CF", -- headset (inside part)
         [SHOES]  = "5B5B5B", -- shoes
         [HAIR]   = "D2D2CF", -- hair
         [SKIN]   = "FDF2DA", -- skin
@@ -425,7 +425,7 @@ local PALETTE_DEFOKO = {
         name     = "Otone Peke",
         [PANTS]  = "1A1A1A", -- skirt n sleeves 
         [SHIRT]  = "A9A7A8", -- shirt
-        [GLOVES] = "7F213A", -- UNUSED
+        [GLOVES] = "7F213A", -- headset (inside part)
         [SHOES]  = "1A1A1A", -- shoes
         [HAIR]   = "B53052", -- hair
         [SKIN]   = "FFEFE0", -- skin
@@ -707,8 +707,8 @@ local function on_character_select_load()
     -------------
     -- credits --
     -------------
-    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling and animation")
-	charSelect.credit_add(TEXT_MOD_NAME, "chalz276", "Voice samples")
+    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling/Animation/Pack")
+	charSelect.credit_add(TEXT_MOD_NAME, "chalz276", "Voice samples/Palettes")
     charSelect.credit_add(TEXT_MOD_NAME, "Jv132", "Grafitti artwork")
     charSelect.credit_add(TEXT_MOD_NAME, "Cooliokid 956", "Facial code")
     charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "Physbone engine")
