@@ -709,7 +709,7 @@ local function on_character_select_load()
     CT_DEFOKO = charSelect.character_add(
         "Defoko", -- Character Name
         "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
-        "denpakei32, chalz276", -- Credits
+        "denpakei32/chalz276/TeionLeeIRL", -- Credits
         "6F3E7F",           -- Menu Color
         E_MODEL_DEFOKO,       -- Character Model
         CT_MARIO,           -- Override Character
@@ -743,7 +743,7 @@ local function on_character_select_load()
     charSelect.character_add_costume(CT_DEFOKO,
         "Defoko (Long Sleeves)",
         "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
-        "denpakei32, chalz276",
+        "denpakei32/chalz276/TeionLeeIRL",
         "6F3E7F",
         E_MODEL_DEFOKO_LONGSLEEVES,
         CT_MARIO,
@@ -777,7 +777,7 @@ local function on_character_select_load()
     charSelect.character_add_costume(CT_DEFOKO,
         "Defoko (Spoken For)",
         "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
-        "denpakei32, chalz276",
+        "denpakei32/chalz276/TeionLeeIRL",
         "6F3E7F",
         E_MODEL_DEFOKO_SPOKENFOR,
         CT_MARIO,
@@ -810,7 +810,7 @@ local function on_character_select_load()
 	CT_REI = charSelect.character_add(
         "Adachi Rei", -- Character Name
         "She was projected to be both a voicebank and a humanoid robot, and her voice was completly created in Audacity!",
-        "denpakei32, chalz276", -- Credits
+        "denpakei32/chalz276/TeionLeeIRL", -- Credits
         "F05B11",           -- Menu Color
         E_MODEL_REI,       -- Character Model
         CT_MARIO,           -- Override Character
@@ -843,7 +843,7 @@ local function on_character_select_load()
     charSelect.character_add_costume(CT_REI,
         "Rei (Queen of Venus)",
         "She was projected to be both a voicebank and a humanoid robot, and her voice was completly created in Audacity!",
-        "denpakei32, chalz276",
+        "denpakei32/chalz276/TeionLeeIRL",
         "F05B11",
         E_MODEL_REI_QUEENOFVENUS,
         CT_MARIO,
@@ -875,7 +875,7 @@ local function on_character_select_load()
     charSelect.character_add_costume(CT_REI,
         "Rei (The Hole)",
         "She was projected to be both a voicebank and a humanoid robot, and her voice was completly created in Audacity!",
-        "denpakei32, chalz276",
+        "denpakei32/chalz276/TeionLeeIRL",
         "F05B11",
         E_MODEL_REI_THEHOLE,
         CT_MARIO,
@@ -909,7 +909,7 @@ local function on_character_select_load()
 	CT_MOMO = charSelect.character_add(
         "Momo Momone", -- Character Name
         "She is designed as a maid and housekeeping robot, but she can also sing and communicate with electronic devices!",
-        "denpakei32, chalz276", -- Credits
+        "denpakei32/chalz276/TeionLeeIRL", -- Credits
         "FB757B",           -- Menu Color
         E_MODEL_MOMO,       -- Character Model
         CT_MARIO,           -- Override Character
@@ -939,7 +939,7 @@ local function on_character_select_load()
     charSelect.character_add_costume(CT_MOMO,
         "Momo (Spoken For)",
         "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
-        "denpakei32, chalz276",
+        "denpakei32/chalz276/TeionLeeIRL",
         "FB757B",
         E_MODEL_MOMO_SPOKENFOR,
         CT_MARIO,
