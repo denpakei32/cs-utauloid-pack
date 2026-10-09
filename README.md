@@ -6,12 +6,12 @@
 
 <p align=center> <img src="https://github.com/denpakei32/cs-utauloid-pack/blob/main/utaupack_render_github.png" width="670"> </p>
 
-## <p align=center>Character Select is required. Download it here: https://github.com/Squishy6094/character-select-coop</p>
+## <p align=center>Squishy6094's Character Select mod is required. Download it here: https://github.com/Squishy6094/character-select-coop</p>
 
 ### Credits:
-- **denpakei32**: Modeling/Animation/Pack creator
+- **denpakei32**: 3D Modeling/Animation/Grafitti
 - **Chalz276**: Voice samples/Palettes
-- **Jv132**: Grafitti artwork
+- **TeionLeeIRL**: Voice samples
 - **Cooliokid 956**: Facial code
 - **Wibblus**: Physbone engine
 ### Honorable Mentions:

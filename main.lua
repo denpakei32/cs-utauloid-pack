@@ -11,20 +11,67 @@ end
 -----------------
 -- MAIN MODELS --
 -----------------
-local E_MODEL_DEFOKO = smlua_model_util_get_id("defoko_geo")
-local E_MODEL_REI = smlua_model_util_get_id("rei_geo")
-local E_MODEL_MOMO = smlua_model_util_get_id("momo_geo")
+local E_MODEL_DEFOKO = smlua_model_util_get_id("defoko_main_geo")
+local E_MODEL_REI = smlua_model_util_get_id("rei_main_geo")
+local E_MODEL_MOMO = smlua_model_util_get_id("momo_main_geo")
+
+-----------------
+-- ALT. MODELS --
+-----------------
+local E_MODEL_DEFOKO_SPOKENFOR = smlua_model_util_get_id("defoko_spokenfor_geo")
+local E_MODEL_REI_QUEENOFVENUS = smlua_model_util_get_id("rei_queenofvenus_geo")
+local E_MODEL_MOMO_SPOKENFOR = smlua_model_util_get_id("momo_spokenfor_geo")
+
+local E_MODEL_DEFOKO_LONGSLEEVES = smlua_model_util_get_id("defoko_longsleeves_geo")
+local E_MODEL_REI_THEHOLE = smlua_model_util_get_id("rei_thehole_geo")
 
 -----------------
 -- STAR MODELS --
 -----------------
-local E_MODEL_RICE = smlua_model_util_get_id("d_rice_geo")
-local E_MODEL_PEACH = smlua_model_util_get_id("m_peach_geo")
-local E_MODEL_KARAAGE = smlua_model_util_get_id("r_karaage_geo")
+local E_MODEL_RICE = smlua_model_util_get_id("defoko_star_rice_geo")
+local E_MODEL_PEACH = smlua_model_util_get_id("momo_star_peach_geo")
+local E_MODEL_KARAAGE = smlua_model_util_get_id("rei_star_karaage_geo")
 
-------------------
--- HEALTH ICONS --
-------------------
+----------
+-- CAPS --
+----------
+local CAPTABLE_DEFOKO = {
+    normal = smlua_model_util_get_id("defoko_main_cap_geo"),
+    wing = smlua_model_util_get_id("defoko_main_wingcap_geo"),
+    metal = smlua_model_util_get_id("defoko_main_metalcap_geo"),
+}
+local CAPTABLE_REI = {
+    normal = smlua_model_util_get_id("rei_main_cap_geo"),
+    wing = smlua_model_util_get_id("rei_main_wingcap_geo"),
+    metal = smlua_model_util_get_id("rei_main_metalcap_geo"),
+}
+local CAPTABLE_MOMO = {
+    normal = smlua_model_util_get_id("momo_main_cap_geo"),
+    wing = smlua_model_util_get_id("momo_main_wingcap_geo"),
+    metal = smlua_model_util_get_id("momo_main_metalcap_geo"),
+}
+
+local CAPTABLE_DEFOKO_SPOKENFOR = {
+    normal = smlua_model_util_get_id("defoko_spokenfor_cap_geo"),
+    wing = smlua_model_util_get_id("defoko_spokenfor_wingcap_geo"),
+    metal = smlua_model_util_get_id("defoko_spokenfor_metalcap_geo"),
+}
+
+local CAPTABLE_REI_THEHOLE = {
+    normal = smlua_model_util_get_id("rei_thehole_cap_geo"),
+    wing = smlua_model_util_get_id("rei_thehole_wingcap_geo"),
+    metal = smlua_model_util_get_id("rei_thehole_metalcap_geo"),
+}
+
+local CAPTABLE_REI_QUEENOFVENUS = {
+    normal = smlua_model_util_get_id("rei_queenofvenus_cap_geo"),
+    wing = smlua_model_util_get_id("rei_queenofvenus_wingcap_geo"),
+    metal = smlua_model_util_get_id("rei_queenofvenus_metalcap_geo"),
+}
+
+----------------
+-- LIFE ICONS --
+----------------
 local TEX_DEFOKO_LIFE_ICON = get_texture_info("defoko_icon")
 local TEX_REI_LIFE_ICON = get_texture_info("rei_icon")
 local TEX_MOMO_LIFE_ICON = get_texture_info("momo_icon")
@@ -32,9 +79,9 @@ local TEX_MOMO_LIFE_ICON = get_texture_info("momo_icon")
 --------------
 -- GRAFITTI --
 --------------
-local TEX_DEFOKO_GRAFITTI = get_texture_info("defoko_spray")
-local TEX_REI_GRAFITTI = get_texture_info("rei_spray")
-local TEX_MOMO_GRAFITTI = get_texture_info("momo_spray")
+local TEX_DEFOKO_GRAFITTI = get_texture_info("defoko_grafitti")
+local TEX_REI_GRAFITTI = get_texture_info("rei_grafitti")
+local TEX_MOMO_GRAFITTI = get_texture_info("momo_grafitti")
 
 -------------------
 -- CS MENU MUSIC --
@@ -74,7 +121,6 @@ local ANIMTABLE_DEFOKO = {
     [CHAR_ANIM_HANG_ON_OWL] = "utau_anim_2B",
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
-    -- [CHAR_ANIM_IDLE_ON_LEDGE] = "utau_anim_33",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
     [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
@@ -132,7 +178,6 @@ local ANIMTABLE_MOMO = {
     [CHAR_ANIM_HANG_ON_OWL] = "utau_anim_2B",
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
-    -- [CHAR_ANIM_IDLE_ON_LEDGE] = "utau_anim_33",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
     [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
@@ -190,7 +235,6 @@ local ANIMTABLE_REI = {
     [CHAR_ANIM_HANG_ON_OWL] = "utau_anim_2B",
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
-    -- [CHAR_ANIM_IDLE_ON_LEDGE] = "utau_anim_33",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
     [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
@@ -236,7 +280,7 @@ local VOICETABLE_DEFOKO = {
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'DefokoYahoo.ogg', 'DefokoWaha.ogg', 'DefokoYippee.ogg'}, -- Triple jump sounds
     [CHAR_SOUND_UH] = 'DefokoUh.ogg', -- Soft wall bonk
     [CHAR_SOUND_UH2] = 'DefokoEeuh.ogg', -- Quick ledge get up
-    [CHAR_SOUND_UH2_2] = 'Empty.ogg', -- Landing after long jump
+    [CHAR_SOUND_UH2_2] = 'DefokoUh.ogg', -- Landing after long jump
     [CHAR_SOUND_DOH] = 'DefokoDoh.ogg', -- Hard wall bonk
     [CHAR_SOUND_OOOF] = 'DefokoOof.ogg', -- Attacked in air
     [CHAR_SOUND_OOOF2] = 'DefokoOof.ogg', -- Land from hard bonk
@@ -250,21 +294,21 @@ local VOICETABLE_DEFOKO = {
     [CHAR_SOUND_TWIRL_BOUNCE] = 'DefokoBoing.ogg', -- Bouncing off of a flower spring
     [CHAR_SOUND_GROUND_POUND_WAH] = 'DefokoWah.ogg', -- Ground Pound after startup
     [CHAR_SOUND_WAH2] = 'DefokoWah.ogg', -- Throwing something
-    [CHAR_SOUND_HRMM] = 'Empty.ogg', -- Lifting something
+    [CHAR_SOUND_HRMM] = 'DefokoGrab.ogg', -- Lifting something
     [CHAR_SOUND_HERE_WE_GO] = 'DefokoHereWeGo.ogg', -- Star get
     [CHAR_SOUND_SO_LONGA_BOWSER] = 'DefokoBowser.ogg', -- Throwing Bowser
     [CHAR_SOUND_ATTACKED] = 'DefokoAttacked.ogg', -- Damaged
-    [CHAR_SOUND_PANTING] = 'Empty.ogg', -- Low health
-    [CHAR_SOUND_PANTING_COLD] = 'Empty.ogg', -- Getting cold
+    [CHAR_SOUND_PANTING] = 'DefokoPanting.ogg', -- Low health
+    [CHAR_SOUND_PANTING_COLD] = 'DefokoPanting.ogg', -- Getting cold
     [CHAR_SOUND_ON_FIRE] = 'DefokoBurning.ogg', -- Burned
     [CHAR_SOUND_IMA_TIRED] = 'DefokoTired.ogg', -- Mario feeling tired
     [CHAR_SOUND_YAWNING] = 'DefokoYawn.ogg', -- Mario yawning before he sits down to sleep
-    [CHAR_SOUND_SNORING1] = 'Empty.ogg', -- Snore Inhale
-    [CHAR_SOUND_SNORING2] = 'Empty.ogg', -- Exhale
-    [CHAR_SOUND_SNORING3] = 'Empty.ogg', -- Sleep talking / mumbling
-    [CHAR_SOUND_COUGHING1] = 'Empty.ogg', -- Cough take 1
-    [CHAR_SOUND_COUGHING2] = 'Empty.ogg', -- Cough take 2
-    [CHAR_SOUND_COUGHING3] = 'Empty.ogg', -- Cough take 3
+    [CHAR_SOUND_SNORING1] = 'DefokoSnore1.ogg', -- Snore Inhale
+    [CHAR_SOUND_SNORING2] = 'DefokoSnore2.ogg', -- Exhale
+    [CHAR_SOUND_SNORING3] = 'DefokoSnore3.ogg', -- Sleep talking / mumbling
+    [CHAR_SOUND_COUGHING1] = 'DefokoCough.ogg', -- Cough take 1
+    [CHAR_SOUND_COUGHING2] = 'DefokoCough.ogg', -- Cough take 2
+    [CHAR_SOUND_COUGHING3] = 'DefokoCough.ogg', -- Cough take 3
     [CHAR_SOUND_DYING] = 'DefokoDead.ogg', -- Dying from damage
     [CHAR_SOUND_DROWNING] = 'DefokoDrown.ogg', -- Running out of air underwater
     [CHAR_SOUND_MAMA_MIA] = 'DefokoMamaMia.ogg' -- Booted out of level
@@ -283,7 +327,7 @@ local VOICETABLE_REI = {
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'ReiYahoo.ogg', 'ReiWaha.ogg', 'ReiYippee.ogg'}, -- Triple jump sounds
     [CHAR_SOUND_UH] = 'ReiUh.ogg', -- Soft wall bonk
     [CHAR_SOUND_UH2] = 'ReiEeuh.ogg', -- Quick ledge get up
-    [CHAR_SOUND_UH2_2] = 'Empty.ogg', -- Landing after long jump
+    [CHAR_SOUND_UH2_2] = 'ReiUh.ogg', -- Landing after long jump
     [CHAR_SOUND_DOH] = 'ReiDoh.ogg', -- Hard wall bonk
     [CHAR_SOUND_OOOF] = 'ReiOof.ogg', -- Attacked in air
     [CHAR_SOUND_OOOF2] = 'ReiOof.ogg', -- Land from hard bonk
@@ -297,21 +341,21 @@ local VOICETABLE_REI = {
     [CHAR_SOUND_TWIRL_BOUNCE] = 'ReiBoing.ogg', -- Bouncing off of a flower spring
     [CHAR_SOUND_GROUND_POUND_WAH] = 'ReiWah.ogg', -- Ground Pound after startup
     [CHAR_SOUND_WAH2] = 'ReiWah.ogg', -- Throwing something
-    [CHAR_SOUND_HRMM] = 'Empty.ogg', -- Lifting something
+    [CHAR_SOUND_HRMM] = 'ReiGrab.ogg', -- Lifting something
     [CHAR_SOUND_HERE_WE_GO] = 'ReiHereWeGo.ogg', -- Star get
     [CHAR_SOUND_SO_LONGA_BOWSER] = 'ReiBowser.ogg', -- Throwing Bowser
     [CHAR_SOUND_ATTACKED] = 'ReiAttacked.ogg', -- Damaged
-    [CHAR_SOUND_PANTING] = 'Empty.ogg', -- Low health
-    [CHAR_SOUND_PANTING_COLD] = 'Empty.ogg', -- Getting cold
+    [CHAR_SOUND_PANTING] = 'ReiPanting.ogg', -- Low health
+    [CHAR_SOUND_PANTING_COLD] = 'ReiPanting.ogg', -- Getting cold
     [CHAR_SOUND_ON_FIRE] = 'ReiBurning.ogg', -- Burned
     [CHAR_SOUND_IMA_TIRED] = 'ReiTired.ogg', -- Mario feeling tired
     [CHAR_SOUND_YAWNING] = 'ReiYawn.ogg', -- Mario yawning before he sits down to sleep
-    [CHAR_SOUND_SNORING1] = 'Empty.ogg', -- Snore Inhale
-    [CHAR_SOUND_SNORING2] = 'Empty.ogg', -- Exhale
-    [CHAR_SOUND_SNORING3] = 'Empty.ogg', -- Sleep talking / mumbling
-    [CHAR_SOUND_COUGHING1] = 'Empty.ogg', -- Cough take 1
-    [CHAR_SOUND_COUGHING2] = 'Empty.ogg', -- Cough take 2
-    [CHAR_SOUND_COUGHING3] = 'Empty.ogg', -- Cough take 3
+    [CHAR_SOUND_SNORING1] = 'ReiSnore1.ogg', -- Snore Inhale
+    [CHAR_SOUND_SNORING2] = 'ReiSnore2.ogg', -- Exhale
+    [CHAR_SOUND_SNORING3] = 'ReiSnore3.ogg', -- Sleep talking / mumbling
+    [CHAR_SOUND_COUGHING1] = 'ReiCough.ogg', -- Cough take 1
+    [CHAR_SOUND_COUGHING2] = 'ReiCough.ogg', -- Cough take 2
+    [CHAR_SOUND_COUGHING3] = 'ReiCough.ogg', -- Cough take 3
     [CHAR_SOUND_DYING] = 'ReiDead.ogg', -- Dying from damage
     [CHAR_SOUND_DROWNING] = 'ReiDrown.ogg', -- Running out of air underwater
     [CHAR_SOUND_MAMA_MIA] = 'ReiMamaMia.ogg' -- Booted out of level
@@ -330,7 +374,7 @@ local VOICETABLE_MOMO = {
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'MomoYahoo.ogg', 'MomoWaha.ogg', 'MomoYippee.ogg'}, -- Triple jump sounds
     [CHAR_SOUND_UH] = 'MomoUh.ogg', -- Soft wall bonk
     [CHAR_SOUND_UH2] = 'MomoEeuh.ogg', -- Quick ledge get up
-    [CHAR_SOUND_UH2_2] = 'Empty.ogg', -- Landing after long jump
+    [CHAR_SOUND_UH2_2] = 'MomoUh.ogg', -- Landing after long jump
     [CHAR_SOUND_DOH] = 'MomoDoh.ogg', -- Hard wall bonk
     [CHAR_SOUND_OOOF] = 'MomoOof.ogg', -- Attacked in air
     [CHAR_SOUND_OOOF2] = 'MomoOof.ogg', -- Land from hard bonk
@@ -344,44 +388,25 @@ local VOICETABLE_MOMO = {
     [CHAR_SOUND_TWIRL_BOUNCE] = 'MomoBoing.ogg', -- Bouncing off of a flower spring
     [CHAR_SOUND_GROUND_POUND_WAH] = 'MomoWah.ogg', -- Ground Pound after startup
     [CHAR_SOUND_WAH2] = 'MomoWah.ogg', -- Throwing something
-    [CHAR_SOUND_HRMM] = 'Empty.ogg', -- Lifting something
+    [CHAR_SOUND_HRMM] = 'MomoGrab.ogg', -- Lifting something
     [CHAR_SOUND_HERE_WE_GO] = 'MomoHereWeGo.ogg', -- Star get
     [CHAR_SOUND_SO_LONGA_BOWSER] = 'MomoBowser.ogg', -- Throwing Bowser
     [CHAR_SOUND_ATTACKED] = 'MomoAttacked.ogg', -- Damaged
-    [CHAR_SOUND_PANTING] = 'Empty.ogg', -- Low health
-    [CHAR_SOUND_PANTING_COLD] = 'Empty.ogg', -- Getting cold
+    [CHAR_SOUND_PANTING] = 'MomoPanting.ogg', -- Low health
+    [CHAR_SOUND_PANTING_COLD] = 'MomoPanting.ogg', -- Getting cold
     [CHAR_SOUND_ON_FIRE] = 'MomoBurning.ogg', -- Burned
     [CHAR_SOUND_IMA_TIRED] = 'MomoTired.ogg', -- Mario feeling tired
     [CHAR_SOUND_YAWNING] = 'MomoYawn.ogg', -- Mario yawning before he sits down to sleep
-    [CHAR_SOUND_SNORING1] = 'Empty.ogg', -- Snore Inhale
-    [CHAR_SOUND_SNORING2] = 'Empty.ogg', -- Exhale
-    [CHAR_SOUND_SNORING3] = 'Empty.ogg', -- Sleep talking / mumbling
-    [CHAR_SOUND_COUGHING1] = 'Empty.ogg', -- Cough take 1
-    [CHAR_SOUND_COUGHING2] = 'Empty.ogg', -- Cough take 2
-    [CHAR_SOUND_COUGHING3] = 'Empty.ogg', -- Cough take 3
+    [CHAR_SOUND_SNORING1] = 'MomoSnore1.ogg', -- Snore Inhale
+    [CHAR_SOUND_SNORING2] = 'MomoSnore2.ogg', -- Exhale
+    [CHAR_SOUND_SNORING3] = 'MomoSnore3.ogg', -- Sleep talking / mumbling
+    [CHAR_SOUND_COUGHING1] = 'MomoCough.ogg', -- Cough take 1
+    [CHAR_SOUND_COUGHING2] = 'MomoCough.ogg', -- Cough take 2
+    [CHAR_SOUND_COUGHING3] = 'MomoCough.ogg', -- Cough take 3
     [CHAR_SOUND_DYING] = 'MomoDead.ogg', -- Dying from damage
     [CHAR_SOUND_DROWNING] = 'MomoDrown.ogg', -- Running out of air underwater
     [CHAR_SOUND_MAMA_MIA] = 'MomoMamaMia.ogg' -- Booted out of level
 
-}
-
-----------
--- CAPS --
-----------
-local CAPTABLE_DEFOKO = {
-    normal = smlua_model_util_get_id("defoko_cap_geo"),
-    wing = smlua_model_util_get_id("defoko_wingcap_geo"),
-    metal = smlua_model_util_get_id("defoko_metalcap_geo"),
-}
-local CAPTABLE_REI = {
-    normal = smlua_model_util_get_id("rei_cap_geo"),
-    wing = smlua_model_util_get_id("rei_wingcap_geo"),
-    metal = smlua_model_util_get_id("rei_metalcap_geo"),
-}
-local CAPTABLE_MOMO = {
-    normal = smlua_model_util_get_id("momo_cap_geo"),
-    wing = smlua_model_util_get_id("momo_wingcap_geo"),
-    metal = smlua_model_util_get_id("momo_metalcap_geo"),
 }
 
 --------------
@@ -490,6 +515,19 @@ local PALETTE_REI = {
         [EMBLEM] = "D63B4D"  -- hair tasel
     },
 }
+local PALETTE_REI_THEHOLE = { -- default palette for the hole rei
+    {
+        name     = "Adachi Rei",
+        [PANTS]  = "121212", -- skirt n pants
+        [SHIRT]  = "1A1A1A", -- jacket
+        [GLOVES] = "FFFFFF", -- gloves
+        [SHOES]  = "FFFFFF", -- top (white by default) part of shoes
+        [HAIR]   = "F05B11", -- hair
+        [SKIN]   = "FAE5B7", -- skin
+        [CAP]    = "101010", -- headset (black part)
+        [EMBLEM] = "FFFFFF"  -- hair tasel
+    },
+}
 local PALETTE_MOMO = {
     {
         name     = "Momo Momone",
@@ -545,6 +583,63 @@ local PALETTE_MOMO = {
         [SKIN]   = "FCD4B5", -- skin
         [CAP]    = "FFFFFF", -- hat n sleeves
         [EMBLEM] = "FFFFFF" -- gear
+    },
+}
+local PALETTE_REI_QUEENOFVENUS = {
+    {
+        name     = "Adachi Rei",
+        [PANTS]  = "696765", -- skirt n pants
+        [SHIRT]  = "EAEAEA", -- jacket
+        [GLOVES] = "FFFFFF", -- gloves
+        [SHOES]  = "FFFFFF", -- top (white by default) part of shoes
+        [HAIR]   = "F05B11", -- hair
+        [SKIN]   = "FAE5B7", -- skin
+        [CAP]    = "0000FF", -- headset (black part)
+        [EMBLEM] = "FFFFFF"  -- hair tasel
+    },
+    {
+        name     = "Tsukumo Shion",
+        [PANTS]  = "101010", -- skirt n pants
+        [SHIRT]  = "101010", -- jacket
+        [GLOVES] = "FFFFFF", -- gloves
+        [SHOES]  = "FFFFFF", -- top (white by default) part of shoes
+        [HAIR]   = "BF6FE3", -- hair
+        [SKIN]   = "FAE5B7", -- skin
+        [CAP]    = "0000FF", -- headset (black part)
+        [EMBLEM] = "FFFFFF"  -- hair tasel
+    },
+	    {
+        name     = "Chahakobi Meguri",
+        [PANTS]  = "1F2531", -- skirt n pants
+        [SHIRT]  = "FEFEFC", -- jacket
+        [GLOVES] = "FFFBCC", -- gloves
+        [SHOES]  = "FFFFFF", -- top (white by default) part of shoes
+        [HAIR]   = "ACE21A", -- hair
+        [SKIN]   = "FFFBCC", -- skin
+        [CAP]    = "0000FF", -- headset (black part)
+        [EMBLEM] = "EC2728"  -- hair tasel
+    },
+	    {
+        name     = "Yokune Ruko",
+        [PANTS]  = "2B2429", -- skirt n pants
+        [SHIRT]  = "28335B", -- jacket
+        [GLOVES] = "FFFFFF", -- gloves
+        [SHOES]  = "E2E2E2", -- top (white by default) part of shoes
+        [HAIR]   = "101010", -- hair
+        [SKIN]   = "FBF4DD", -- skin
+        [CAP]    = "0000FF", -- headset (black part)
+        [EMBLEM] = "72AEFF"  -- hair tasel
+    },
+	    {
+        name     = "Miko Ooka",
+        [PANTS]  = "66453E", -- skirt n pants
+        [SHIRT]  = "F8C6D0", -- jacket
+        [GLOVES] = "D7A38C", -- gloves
+        [SHOES]  = "F5DD9F", -- top (white by default) part of shoes
+        [HAIR]   = "C9947F", -- hair
+        [SKIN]   = "FFE5DE", -- skin
+        [CAP]    = "0000FF", -- headset (black part)
+        [EMBLEM] = "D63B4D"  -- hair tasel
     },
 }
 
@@ -606,7 +701,7 @@ local HEALTH_METER_MOMO = {
 local function on_character_select_load()
 	--------------
 	--- defoko ---
-	--------------
+	-------------- default
 	init_physbone_chain(E_MODEL_DEFOKO, 0, 0.004, 1, 90, 90) -- cable
 	init_physbone_chain(E_MODEL_DEFOKO, 1, 0.05, 0.9, 90, 90) -- ahoge
 	init_physbone_chain(E_MODEL_DEFOKO, 2, 0.05, 0.9, 0, 90) -- necktie
@@ -637,6 +732,74 @@ local function on_character_select_load()
     charSelect.character_add_graffiti(CT_DEFOKO, TEX_DEFOKO_GRAFITTI)
     charSelect.character_set_nickname(CT_DEFOKO, "Defoko")
     charSelect.character_add_caps(E_MODEL_DEFOKO, CAPTABLE_DEFOKO)
+
+    --------------
+	--- defoko ---
+	-------------- long sleeves
+    init_physbone_chain(E_MODEL_DEFOKO_LONGSLEEVES, 0, 0.004, 1, 90, 90) -- cable
+	init_physbone_chain(E_MODEL_DEFOKO_LONGSLEEVES, 1, 0.05, 0.9, 90, 90) -- ahoge
+	init_physbone_chain(E_MODEL_DEFOKO_LONGSLEEVES, 2, 0.05, 0.9, 0, 90) -- necktie
+
+    charSelect.character_add_costume(CT_DEFOKO,
+        "Defoko (Long Sleeves)",
+        "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
+        "denpakei32, chalz276",
+        "6F3E7F",
+        E_MODEL_DEFOKO_LONGSLEEVES,
+        CT_MARIO,
+        TEX_DEFOKO_LIFE_ICON,
+        1.2
+    )
+    charSelect.character_add_voice(E_MODEL_DEFOKO_LONGSLEEVES, VOICETABLE_DEFOKO)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_DEFOKO_LONGSLEEVES, E_MODEL_RICE, nil)
+    end
+    if PALETTE_DEFOKO then
+        for i = 1, #PALETTE_DEFOKO do
+            charSelect.character_add_palette_preset(E_MODEL_DEFOKO_LONGSLEEVES, PALETTE_DEFOKO[i], PALETTE_DEFOKO[i].name)
+        end
+    end
+    charSelect.character_add_health_meter(CT_DEFOKO, HEALTH_METER_DEFOKO)
+	charSelect.character_set_category(CT_DEFOKO, TEXT_MOD_NAME)
+	charSelect.character_add_animations(E_MODEL_DEFOKO_LONGSLEEVES, ANIMTABLE_DEFOKO)
+    charSelect.character_add_menu_instrumental(CT_DEFOKO, E_DEFOKO_CSMENU)
+    charSelect.character_add_graffiti(CT_DEFOKO, TEX_DEFOKO_GRAFITTI)
+    charSelect.character_set_nickname(CT_DEFOKO, "Defoko")
+    charSelect.character_add_caps(E_MODEL_DEFOKO_LONGSLEEVES, CAPTABLE_DEFOKO)
+
+    --------------
+	--- defoko ---
+	-------------- spoken for
+    init_physbone_chain(E_MODEL_DEFOKO_SPOKENFOR, 0, 0.004, 1, 90, 90) -- cable
+	init_physbone_chain(E_MODEL_DEFOKO_SPOKENFOR, 1, 0.05, 0.9, 90, 90) -- ahoge
+	init_physbone_chain(E_MODEL_DEFOKO_SPOKENFOR, 2, 0.05, 0.9, 0, 90) -- necktie
+
+    charSelect.character_add_costume(CT_DEFOKO,
+        "Defoko (Spoken For)",
+        "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
+        "denpakei32, chalz276",
+        "6F3E7F",
+        E_MODEL_DEFOKO_SPOKENFOR,
+        CT_MARIO,
+        TEX_DEFOKO_LIFE_ICON,
+        1.2
+    )
+    charSelect.character_add_voice(E_MODEL_DEFOKO_SPOKENFOR, VOICETABLE_DEFOKO)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_DEFOKO_SPOKENFOR, E_MODEL_RICE, nil)
+    end
+    if PALETTE_DEFOKO then
+        for i = 1, #PALETTE_DEFOKO do
+            charSelect.character_add_palette_preset(E_MODEL_DEFOKO_SPOKENFOR, PALETTE_DEFOKO[i], PALETTE_DEFOKO[i].name)
+        end
+    end
+    charSelect.character_add_health_meter(CT_DEFOKO, HEALTH_METER_DEFOKO)
+	charSelect.character_set_category(CT_DEFOKO, TEXT_MOD_NAME)
+	charSelect.character_add_animations(E_MODEL_DEFOKO_SPOKENFOR, ANIMTABLE_DEFOKO)
+    charSelect.character_add_menu_instrumental(CT_DEFOKO, E_DEFOKO_CSMENU)
+    charSelect.character_add_graffiti(CT_DEFOKO, TEX_DEFOKO_GRAFITTI)
+    charSelect.character_set_nickname(CT_DEFOKO, "Defoko")
+    charSelect.character_add_caps(E_MODEL_DEFOKO_SPOKENFOR, CAPTABLE_DEFOKO_SPOKENFOR)
 
 	-----------
 	--- rei ---
@@ -671,6 +834,72 @@ local function on_character_select_load()
     charSelect.character_set_nickname(CT_REI, "Rei")
     charSelect.character_add_caps(E_MODEL_REI, CAPTABLE_REI)
 
+    -----------
+	--- rei ---
+	----------- queen of venus
+	init_physbone_chain(E_MODEL_REI_QUEENOFVENUS, 0, 0.05, 0.9, 90, 90) -- hair
+    init_physbone_chain(E_MODEL_REI_QUEENOFVENUS, 1, 0.2, 0.567, 90, 90) -- tie
+
+    charSelect.character_add_costume(CT_REI,
+        "Rei (Queen of Venus)",
+        "She was projected to be both a voicebank and a humanoid robot, and her voice was completly created in Audacity!",
+        "denpakei32, chalz276",
+        "F05B11",
+        E_MODEL_REI_QUEENOFVENUS,
+        CT_MARIO,
+        TEX_REI_LIFE_ICON,
+        1.2
+    )
+    charSelect.character_add_voice(E_MODEL_REI_QUEENOFVENUS, VOICETABLE_REI)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_REI_QUEENOFVENUS, E_MODEL_RICE, nil)
+    end
+    if PALETTE_REI_QUEENOFVENUS then
+        for i = 1, #PALETTE_REI_QUEENOFVENUS do
+            charSelect.character_add_palette_preset(E_MODEL_REI_QUEENOFVENUS, PALETTE_REI_QUEENOFVENUS[i], PALETTE_REI_QUEENOFVENUS[i].name)
+        end
+    end
+    charSelect.character_add_health_meter(CT_REI, HEALTH_METER_REI)
+	charSelect.character_set_category(CT_REI, TEXT_MOD_NAME)
+	charSelect.character_add_animations(E_MODEL_REI_QUEENOFVENUS, ANIMTABLE_REI)
+    charSelect.character_add_menu_instrumental(CT_REI, E_REI_CSMENU)
+    charSelect.character_add_graffiti(CT_REI, TEX_REI_GRAFITTI)
+    charSelect.character_set_nickname(CT_REI, "Rei")
+    charSelect.character_add_caps(E_MODEL_REI_QUEENOFVENUS, CAPTABLE_REI_QUEENOFVENUS)
+
+    -----------
+	--- rei ---
+	----------- the hole
+	init_physbone_chain(E_MODEL_REI_THEHOLE, 0, 0.05, 0.9, 90, 90) -- hair
+
+    charSelect.character_add_costume(CT_REI,
+        "Rei (The Hole)",
+        "She was projected to be both a voicebank and a humanoid robot, and her voice was completly created in Audacity!",
+        "denpakei32, chalz276",
+        "F05B11",
+        E_MODEL_REI_THEHOLE,
+        CT_MARIO,
+        TEX_REI_LIFE_ICON,
+        1.2
+    )
+    charSelect.character_add_voice(E_MODEL_REI_THEHOLE, VOICETABLE_REI)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_REI_THEHOLE, E_MODEL_RICE, nil)
+    end
+    if PALETTE_REI_THEHOLE then
+        charSelect.character_add_palette_preset(E_MODEL_REI_THEHOLE, PALETTE_REI_THEHOLE[1], PALETTE_REI_THEHOLE[1].name)
+        for i = 2, #PALETTE_REI do
+            charSelect.character_add_palette_preset(E_MODEL_REI_THEHOLE, PALETTE_REI[i], PALETTE_REI[i].name)
+        end
+    end
+    charSelect.character_add_health_meter(CT_REI, HEALTH_METER_REI)
+	charSelect.character_set_category(CT_REI, TEXT_MOD_NAME)
+	charSelect.character_add_animations(E_MODEL_REI_THEHOLE, ANIMTABLE_REI)
+    charSelect.character_add_menu_instrumental(CT_REI, E_REI_CSMENU)
+    charSelect.character_add_graffiti(CT_REI, TEX_REI_GRAFITTI)
+    charSelect.character_set_nickname(CT_REI, "Rei")
+    charSelect.character_add_caps(E_MODEL_REI_THEHOLE, CAPTABLE_REI_THEHOLE)
+
     ------------
 	--- momo ---
 	------------
@@ -704,14 +933,48 @@ local function on_character_select_load()
     charSelect.character_set_nickname(CT_MOMO, "Momo")
     charSelect.character_add_caps(E_MODEL_MOMO, CAPTABLE_MOMO)
 
+    ------------
+	--- momo ---
+	------------ spoken for
+    charSelect.character_add_costume(CT_MOMO,
+        "Momo (Spoken For)",
+        "Also known as Uta Utane, she's a voicebank that comes preinstalled with UTAU, and is based on the AquesTalk TTS engine!",
+        "denpakei32, chalz276",
+        "FB757B",
+        E_MODEL_MOMO_SPOKENFOR,
+        CT_MARIO,
+        TEX_MOMO_LIFE_ICON,
+        1.2
+    )
+    charSelect.character_add_voice(E_MODEL_MOMO_SPOKENFOR, VOICETABLE_MOMO)
+    if charSelect.version_get_full().major >= 17 then
+	    charSelect.character_add_celebration_star(E_MODEL_MOMO_SPOKENFOR, E_MODEL_RICE, nil)
+    end
+    if PALETTE_MOMO then
+        for i = 1, #PALETTE_MOMO do
+            charSelect.character_add_palette_preset(E_MODEL_MOMO_SPOKENFOR, PALETTE_MOMO[i], PALETTE_MOMO[i].name)
+        end
+    end
+    charSelect.character_add_health_meter(CT_MOMO, HEALTH_METER_MOMO)
+	charSelect.character_set_category(CT_MOMO, TEXT_MOD_NAME)
+	charSelect.character_add_animations(E_MODEL_MOMO_SPOKENFOR, ANIMTABLE_MOMO)
+    charSelect.character_add_menu_instrumental(CT_MOMO, E_MOMO_CSMENU)
+    charSelect.character_add_graffiti(CT_MOMO, TEX_MOMO_GRAFITTI)
+    charSelect.character_set_nickname(CT_MOMO, "Momo")
+    charSelect.character_add_caps(E_MODEL_MOMO_SPOKENFOR, CAPTABLE_DEFOKO_SPOKENFOR)
+
     -------------
     -- credits --
     -------------
-    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling/Animation/Pack")
+    charSelect.credit_add(TEXT_MOD_NAME, "denpakei32", "Modeling/Animation/Grafitti")
+
 	charSelect.credit_add(TEXT_MOD_NAME, "chalz276", "Voice samples/Palettes")
-    charSelect.credit_add(TEXT_MOD_NAME, "Jv132", "Grafitti artwork")
+    charSelect.credit_add(TEXT_MOD_NAME, "TeionLeeIRL", "Voice samples")
+
     charSelect.credit_add(TEXT_MOD_NAME, "Cooliokid 956", "Facial code")
+
     charSelect.credit_add(TEXT_MOD_NAME, "Wibblus", "Physbone engine")
+
 	charSelect.credit_add(TEXT_MOD_NAME, "AmeyaP", "Defoko voicebank")
 	charSelect.credit_add(TEXT_MOD_NAME, "momomomo-P", "Momo Momone voicebank")
 	charSelect.credit_add(TEXT_MOD_NAME, "missile_39", "Adachi Rei voicebank")
