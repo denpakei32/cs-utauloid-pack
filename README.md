@@ -12,7 +12,6 @@
 - **denpakei32**: Modeling/Animation/Pack creator
 - **Chalz276**: Voice samples/Palettes
 - **TeionLeeIRL**: Voice samples
-- **Jv132**: Grafitti artwork
 - **Cooliokid 956**: Facial code
 - **Wibblus**: Physbone engine
 ### Honorable Mentions:
