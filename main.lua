@@ -528,6 +528,19 @@ local PALETTE_REI_THEHOLE = { -- default palette for the hole rei
         [EMBLEM] = "FFFFFF"  -- hair tasel
     },
 }
+local PALETTE_REI_OPER = {                -- oper's best palette ever (best)
+    {
+        name     = "The Purple Albino",
+        [PANTS]  = "BE000E", -- skirt n pants
+        [SHIRT]  = "FFC900", -- jacket
+        [GLOVES] = "004E00", -- gloves
+        [SHOES]  = "260014", -- top (white by default) part of shoes
+        [HAIR]   = "FFFFFF", -- hair
+        [SKIN]   = "6F3066", -- skin
+        [CAP]    = "FFD400", -- headset (black part)
+        [EMBLEM] = "6C0B00"  -- hair tasel
+    },
+}
 local PALETTE_MOMO = {
     {
         name     = "Momo Momone",
@@ -858,6 +871,7 @@ local function on_character_select_load()
         for i = 1, #PALETTE_REI_QUEENOFVENUS do
             charSelect.character_add_palette_preset(E_MODEL_REI_QUEENOFVENUS, PALETTE_REI_QUEENOFVENUS[i], PALETTE_REI_QUEENOFVENUS[i].name)
         end
+        charSelect.character_add_palette_preset(E_MODEL_REI_QUEENOFVENUS, PALETTE_REI_OPER[1], PALETTE_REI_OPER[1].name) -- oper palette
     end
     charSelect.character_add_health_meter(CT_REI, HEALTH_METER_REI)
 	charSelect.character_set_category(CT_REI, TEXT_MOD_NAME)
