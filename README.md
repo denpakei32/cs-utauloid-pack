@@ -9,7 +9,7 @@
 ## <p align=center>Character Select is required. Download it here: https://github.com/Squishy6094/character-select-coop</p>
 
 ### Credits:
-- **denpakei32**: Modeling/Animation/Pack creator
+- **denpakei32**: Modeling/Grafitti artwork/Animation/Pack creator
 - **Chalz276**: Voice samples/Palettes
 - **TeionLeeIRL**: Voice samples
 - **Cooliokid 956**: Facial code
