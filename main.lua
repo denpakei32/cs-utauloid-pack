@@ -1,5 +1,5 @@
--- name: [CS] \\#CCCCFF\\UTAU\\#D9BFFF\\lo\\#E6B2FF\\id \\#F2A5FF\\Pa\\#FF99FF\\ck
--- description: come back to the desc. later...
+-- name: [CS] \\#FF99FF\\UTAU\\#F2A5FF\\lo\\#E6B2FF\\id \\#D9BFFF\\Pa\\#CCCCFF\\ck
+-- description: Three beloved \\#E6B2FF\\UTAU\\#FFFFFF\\ girls have arrived in the Mushroom Kingdom! will they be able to save the princess? That's up to \\#E6B2FF\\you!\\#FFFFFF\\\n\nThis Character Select mod contains:\n\\#E6B2FF\\Defoko \\#FFFFFF\\(a.k.a. Utane Uta)\n\\#FB757B\\Momone Momo\n\\#FFFFFF\\and \\#FF631C\\Adachi Rei!\n\n\\#A0A0A0\\Made by: denpakei32,\nChalz276, TeionLeeIRL,\nCooliokid 956 and Wibblus.\n\n\\#FB757B\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = get_active_mod().name
 
@@ -122,7 +122,8 @@ local ANIMTABLE_DEFOKO = {
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
-    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
+    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45_2",
+    [CHAR_ANIM_STAND_UP_FROM_SLIDING_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
     [CHAR_ANIM_SLIDE_KICK] = "utau_anim_8C",
     [CHAR_ANIM_CROUCH_FROM_SLIDE_KICK] = "utau_anim_8D",
@@ -137,7 +138,7 @@ local ANIMTABLE_DEFOKO = {
     [CHAR_ANIM_DIVE] = "utau_anim_88",
     [CHAR_ANIM_SLIDE_DIVE] = "utau_anim_89",
     [CHAR_ANIM_STOP_SLIDE_LIGHT_OBJ] = "utau_anim_8B",
-    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E",
+    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E_2",
     [CHAR_ANIM_SLIDE] = "utau_anim_91",
     [CHAR_ANIM_STOP_SLIDE] = "utau_anim_8F",
     [CHAR_ANIM_FALL_FROM_SLIDE] = "utau_anim_90",
@@ -179,7 +180,8 @@ local ANIMTABLE_MOMO = {
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
-    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
+    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45_2",
+    [CHAR_ANIM_STAND_UP_FROM_SLIDING_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
     [CHAR_ANIM_SLIDE_KICK] = "utau_anim_8C",
     [CHAR_ANIM_CROUCH_FROM_SLIDE_KICK] = "utau_anim_8D",
@@ -194,7 +196,7 @@ local ANIMTABLE_MOMO = {
     [CHAR_ANIM_DIVE] = "utau_anim_88",
     [CHAR_ANIM_SLIDE_DIVE] = "utau_anim_89",
     [CHAR_ANIM_STOP_SLIDE_LIGHT_OBJ] = "utau_anim_8B",
-    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E",
+    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E_2",
     [CHAR_ANIM_SLIDE] = "utau_anim_91",
     [CHAR_ANIM_STOP_SLIDE] = "utau_anim_8F",
     [CHAR_ANIM_FALL_FROM_SLIDE] = "utau_anim_90",
@@ -236,7 +238,8 @@ local ANIMTABLE_REI = {
     [CHAR_ANIM_HANG_ON_CEILING] = "utau_anim_35",
     [CHAR_ANIM_DYING_ON_STOMACH] = "utau_anim_2E",
     [CHAR_ANIM_BOTTOM_STUCK_IN_GROUND] = "utau_anim_3E",
-    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45",
+    [CHAR_ANIM_SLIDING_ON_BOTTOM_WITH_LIGHT_OBJ] = "utau_anim_45_2",
+    [CHAR_ANIM_STAND_UP_FROM_SLIDING_WITH_LIGHT_OBJ] = "utau_anim_45",
     [CHAR_ANIM_FALL_FROM_SLIDE_KICK] = "utau_anim_53",
     [CHAR_ANIM_SLIDE_KICK] = "utau_anim_8C",
     [CHAR_ANIM_CROUCH_FROM_SLIDE_KICK] = "utau_anim_8D",
@@ -251,7 +254,7 @@ local ANIMTABLE_REI = {
     [CHAR_ANIM_DIVE] = "utau_anim_88",
     [CHAR_ANIM_SLIDE_DIVE] = "utau_anim_89",
     [CHAR_ANIM_STOP_SLIDE_LIGHT_OBJ] = "utau_anim_8B",
-    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E",
+    [CHAR_ANIM_SLIDE_MOTIONLESS] = "utau_anim_8E_2",
     [CHAR_ANIM_SLIDE] = "utau_anim_91",
     [CHAR_ANIM_STOP_SLIDE] = "utau_anim_8F",
     [CHAR_ANIM_FALL_FROM_SLIDE] = "utau_anim_90",
