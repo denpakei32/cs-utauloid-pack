@@ -18,3 +18,5 @@
 - **AmeyaP**: Defoko voicebank
 - **momomomo-P**: Momo Momone voicebank
 - **missile_39**: Adachi Rei voicebank
+---
+#### <p align=center>My commissions are open! If you're interested, check out the form! https://forms.gle/vnR2ZyDqRVy2a3bg7</p>
